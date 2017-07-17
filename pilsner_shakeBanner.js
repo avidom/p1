@@ -1778,7 +1778,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		
 		function moveon() {
 			TweenMax.killTweensOf(r.shakeIcon.mc);
-			//TweenMax.killTweensOf(r.warn);
+			TweenMax.killTweensOf(r.warn);
 			window.removeEventListener('devicemotion', YaoYiYao, false);
 			tl.play();
 		}
@@ -1795,7 +1795,7 @@ if (loop == null) { loop = false; }	this.initialize(mode,startPosition,loop,{});
 		
 		function checkShake() {
 			tl.pause();
-			//TweenMax.to(r.warn, 1.0, {delay:5.00, onComplete:moveon})
+			TweenMax.to(r.warn, 1.0, {delay:5.00, onComplete:moveon})
 			if (window.DeviceMotionEvent) {
 				window.addEventListener('devicemotion', YaoYiYao, false);
 				//console.log(window.DeviceMotionEvent);
